@@ -1,0 +1,153 @@
+.%scope file "/opt/netronome/p4/components/nfp_pif/me/apps/pif_app_nfd/include/config.h"
+.%scope function multiply_24x8 _multiply_24x8 "/opt/netronome/p4/components/nfp_pif/me/lib/pif/include/pif_common.h" 62 77
+.%arg x 0 x_320_V$60f
+.%arg y 0 y_320_V$610
+.%var result 0 result_320 LIX
+.%scope end
+.%var BLM_NBI8_BLQ0_EMU_QD_BASE 1 _BLM_NBI8_BLQ0_EMU_QD_BASE SEX
+.%var BLM_NBI8_BLQ0_EMU_Q_BASE 3 _BLM_NBI8_BLQ0_EMU_Q_BASE SEX
+.%var BLM_NBI8_BLQ1_EMU_QD_BASE 4 _BLM_NBI8_BLQ1_EMU_QD_BASE SEX
+.%var BLM_NBI8_BLQ1_EMU_Q_BASE 5 _BLM_NBI8_BLQ1_EMU_Q_BASE SEX
+.%var BLM_NBI8_BLQ2_EMU_QD_BASE 6 _BLM_NBI8_BLQ2_EMU_QD_BASE SEX
+.%var BLM_NBI8_BLQ2_EMU_Q_BASE 7 _BLM_NBI8_BLQ2_EMU_Q_BASE SEX
+.%var BLM_NBI8_BLQ3_EMU_QD_BASE 8 _BLM_NBI8_BLQ3_EMU_QD_BASE SEX
+.%var BLM_NBI8_BLQ3_EMU_Q_BASE 9 _BLM_NBI8_BLQ3_EMU_Q_BASE SEX
+.%var BLM_NBI8_BLQ0_EMU_EMEM0_BUFS_BASE 10 _BLM_NBI8_BLQ0_EMU_EMEM0_BUFS_BASE SEX
+.%var BLM_NBI8_BLQ0_BDSRAM_EMEM0_BUFS_BASE 11 _BLM_NBI8_BLQ0_BDSRAM_EMEM0_BUFS_BASE SEX
+.%var pkt 12 _pkt SEX
+.%var pif_pkt_info_spec 21 _pif_pkt_info_spec SEX
+.%var pif_counter_OFFSET_TOO_LARGE_SHIFT 25 _pif_counter_OFFSET_TOO_LARGE_SHIFT SEX
+.%scope function handle_tier_0 _handle_tier_0 "p4src/out/pif_deparse.c" 14 44
+.%arg parrep 26 parrep_367_V$613
+.%arg pktinfo 27 pktinfo_367_V$614
+.%arg pkt_byteoff 28 pkt_byteoff_367_V$615
+.%arg pkt_min_off 0 pkt_min_off_367_V$616
+.%var ctldata 30 ctldata_367 LIX
+.%var orig_len 0 orig_len_367 LIX
+.%var curr_len 0 curr_len_367 LIX
+.%scope end
+.%scope function handle_tier_1 _handle_tier_1 "p4src/out/pif_deparse.c" 46 76
+.%arg parrep 26 parrep_371_V$61b
+.%arg pktinfo 27 pktinfo_371_V$61c
+.%arg pkt_byteoff 28 pkt_byteoff_371_V$61d
+.%arg pkt_min_off 0 pkt_min_off_371_V$61e
+.%var ctldata 30 ctldata_371 LIX
+.%var orig_len 0 orig_len_371 LIX
+.%var curr_len 0 curr_len_371 LIX
+.%scope end
+.%scope function handle_tier_2 _handle_tier_2 "p4src/out/pif_deparse.c" 78 108
+.%arg parrep 26 parrep_375_V$623
+.%arg pktinfo 27 pktinfo_375_V$624
+.%arg pkt_byteoff 28 pkt_byteoff_375_V$625
+.%arg pkt_min_off 0 pkt_min_off_375_V$626
+.%var ctldata 30 ctldata_375 LIX
+.%var orig_len 0 orig_len_375 LIX
+.%var curr_len 0 curr_len_375 LIX
+.%scope end
+.%scope function pif_deparse _pif_deparse "p4src/out/pif_deparse.c" 110 156
+.%arg parrep 26 parrep_379_V$62b
+.%arg pktinfo 27 pktinfo_379_V$62c
+.%var pkt_byteoff 0 pkt_byteoff_379 LIX
+.%var pkt_min_off 0 pkt_min_off_379 LIX
+.%var ret 29 ret_379 LIX
+.%scope block 132 139
+.%var move_len 0 move_len_381 LIX
+.%scope end
+.%scope block 142 149
+.%var move_len 0 move_len_383 LIX
+.%scope end
+.%scope end
+.%type U4
+.%type A16 2
+.%type U1
+.%type A32768 2
+.%type A16 2
+.%type A2048 2
+.%type A16 2
+.%type A2048 2
+.%type A16 2
+.%type A2048 2
+.%type A41943040 2
+.%type A10485760 2
+.%type S28 pktio_meta{
+__unnamed 0 13;
+}
+.%type S28 {
+__unnamed 0 14;
+__raw 0 20;
+}
+.%type S28 {
+p_nbi 0 15;
+p_ctm_size 8:30:2 0;
+p_orig_len 8:16:14 0;
+p_offset 8:0:16 0;
+p_src 12:16:16 0;
+p_dst 12:0:16 0;
+p_seq 16:16:16 0;
+p_ro_ctx 16:11:5 0;
+p_is_gro_seq 16:10:1 0;
+p_rx_ipv4_csum_ok 16:9:1 0;
+p_rx_ipv4_csum_present 16:8:1 0;
+p_rx_l4_csum_ok 16:7:1 0;
+p_rx_l4_csum_present 16:6:1 0;
+p_rx_l4_tcp 16:5:1 0;
+p_rx_mac_matched 16:4:1 0;
+p_tunnel 16:3:1 0;
+resv4 16:0:3 0;
+__unnamed 20 19;
+p_vlan 24:16:16 0;
+resv3 24:0:16 0;
+}
+.%type S8 nbi_meta_pkt_info{
+__unnamed 0 16;
+}
+.%type S8 {
+__unnamed 0 17;
+__raw 0 18;
+}
+.%type S8 {
+isl 0:26:6 0;
+pnum 0:16:10 0;
+bls 0:14:2 0;
+len 0:0:14 0;
+split 4:31:1 0;
+resv0 4:29:2 0;
+muptr 4:0:29 0;
+}
+.%type A8 0
+.%type S4 {
+p_timestamp 0:0:32 0;
+}
+.%type A28 0
+.%type S8 pif_pkt_specific{
+__unnamed 0 22;
+}
+.%type S8 {
+__unnamed 0 23;
+_raw 0 24;
+}
+.%type S8 {
+resv3 0:24:8 0;
+trunc_len 0:10:14 0;
+pkt_pl_off 0:0:10 0;
+calc_fld_bmsk 4 0;
+}
+.%type A8 0
+.%type U8
+.%type P6 0
+.%type P2 12
+.%type P2 29
+.%type I4
+.%type P6 31
+.%type S4 pif_parrep_ctldata{
+valid 0:31:1 0;
+t0_valid 0:30:1 0;
+t0_dirty 0:29:1 0;
+t0_orig_len 0:28:1 0;
+t1_valid 0:27:1 0;
+t1_dirty 0:26:1 0;
+t1_orig_len 0:25:1 0;
+t2_valid 0:24:1 0;
+t2_dirty 0:23:1 0;
+t2_orig_len 0:22:1 0;
+}

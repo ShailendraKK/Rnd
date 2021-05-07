@@ -1,0 +1,25 @@
+{
+	"tables": {
+        "ingress::feature1_exact": {
+            "rules": [
+            {
+                "action":
+                {
+                    "type" : "ingress::set_actionselect1",
+		    "data" : {
+                    "featurevalue1" : {
+                            "value" : "01"
+                        }
+		     }
+		},                
+		"name" : "1",
+                "match": {
+                    "ipv4.protocol": {
+                        "value": "[40858,44785]"
+                    }
+                }
+            }
+            ]
+          }
+        }
+}

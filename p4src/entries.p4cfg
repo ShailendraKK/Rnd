@@ -1,0 +1,1520 @@
+{
+"tables": {
+          "ingress::ipv4_exact": {
+            "rules": [
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0004"
+                                },
+                            "port": {
+                                 "value": "771"
+                                }
+                        }
+
+                },
+                "name" : "1",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "1"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "1"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "1"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0004"
+                                },
+                            "port": {
+                                 "value": "771"
+                                }
+                        }
+
+                },
+                "name" : "2",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "1"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "1"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "2"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0004"
+                                },
+                            "port": {
+                                 "value": "771"
+                                }
+                        }
+
+                },
+                "name" : "3",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "1"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "2"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "1"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0004"
+                                },
+                            "port": {
+                                 "value": "771"
+                                }
+                        }
+
+                },
+                "name" : "4",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "1"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "2"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "2"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0002"
+                                },
+                            "port": {
+                                 "value": "769"
+                                }
+                        }
+
+                },
+                "name" : "5",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "2"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "1"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "1"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0002"
+                                },
+                            "port": {
+                                 "value": "769"
+                                }
+                        }
+
+                },
+                "name" : "6",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "2"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "1"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "2"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0002"
+                                },
+                            "port": {
+                                 "value": "769"
+                                }
+                        }
+
+                },
+                "name" : "7",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "2"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "2"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "1"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0002"
+                                },
+                            "port": {
+                                 "value": "769"
+                                }
+                        }
+
+                },
+                "name" : "8",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "2"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "2"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "2"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0004"
+                                },
+                            "port": {
+                                 "value": "771"
+                                }
+                        }
+
+                },
+                "name" : "9",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "1"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "3"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "1"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0004"
+                                },
+                            "port": {
+                                 "value": "771"
+                                }
+                        }
+
+                },
+                "name" : "10",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "1"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "3"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "2"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0004"
+                                },
+                            "port": {
+                                 "value": "771"
+                                }
+                        }
+
+                },
+                "name" : "11",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "1"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "4"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "1"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0004"
+                                },
+                            "port": {
+                                 "value": "771"
+                                }
+                        }
+
+                },
+                "name" : "12",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "1"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "4"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "2"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0006"
+                                },
+                            "port": {
+                                 "value": "773"
+                                }
+                        }
+
+                },
+                "name" : "13",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "2"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "3"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "1"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0006"
+                                },
+                            "port": {
+                                 "value": "773"
+                                }
+                        }
+
+                },
+                "name" : "14",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "2"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "3"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "2"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0006"
+                                },
+                            "port": {
+                                 "value": "773"
+                                }
+                        }
+
+                },
+                "name" : "15",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "2"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "4"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "1"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0006"
+                                },
+                            "port": {
+                                 "value": "773"
+                                }
+                        }
+
+                },
+                "name" : "16",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "2"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "4"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "2"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0004"
+                                },
+                            "port": {
+                                 "value": "771"
+                                }
+                        }
+
+                },
+                "name" : "17",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "1"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "5"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "1"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0005"
+                                },
+                            "port": {
+                                 "value": "772"
+                                }
+                        }
+
+                },
+                "name" : "18",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "2"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "5"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "1"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0004"
+                                },
+                            "port": {
+                                 "value": "771"
+                                }
+                        }
+
+                },
+                "name" : "19",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "1"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "5"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "2"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0006"
+                                },
+                            "port": {
+                                 "value": "773"
+                                }
+                        }
+
+                },
+                "name" : "20",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "2"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "5"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "2"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0004"
+                                },
+                            "port": {
+                                 "value": "771"
+                                }
+                        }
+
+                },
+                "name" : "21",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "1"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "1"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "3"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0004"
+                                },
+                            "port": {
+                                 "value": "771"
+                                }
+                        }
+
+                },
+                "name" : "22",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "1"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "2"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "3"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0004"
+                                },
+                            "port": {
+                                 "value": "771"
+                                }
+                        }
+
+                },
+                "name" : "23",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "1"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "3"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "3"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0004"
+                                },
+                            "port": {
+                                 "value": "771"
+                                }
+                        }
+
+                },
+                "name" : "24",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "1"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "4"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "3"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0004"
+                                },
+                            "port": {
+                                 "value": "771"
+                                }
+                        }
+
+                },
+                "name" : "25",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "1"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "5"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "3"
+                    }
+
+                }
+                
+            },{
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0003"
+                                },
+                            "port": {
+                                 "value": "770"
+                                }
+                        }
+
+                },
+                "name" : "26",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "2"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "1"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "3"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0005"
+                                },
+                            "port": {
+                                 "value": "772"
+                                }
+                        }
+
+                },
+                "name" : "27",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "2"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "2"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "3"
+                    }
+
+                }
+                
+            },
+	   {
+                "action":
+                {                 
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0005"
+                                },
+                            "port": {
+                                 "value": "772"
+                                }
+                        }
+
+                },      
+                "name" : "57",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "2"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "3"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "3"
+                    }
+
+                }
+
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0006"
+                                },
+                            "port": {
+                                 "value": "773"
+                                }
+                        }
+
+                },
+                "name" : "28",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "2"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "4"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "3"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0006"
+                                },
+                            "port": {
+                                 "value": "773"
+                                }
+                        }
+
+                },
+                "name" : "29",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "2"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "5"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "3"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0004"
+                                },
+                            "port": {
+                                 "value": "771"
+                                }
+                        }
+
+                },
+                "name" : "30",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "3"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "1"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "1"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0004"
+                                },
+                            "port": {
+                                 "value": "771"
+                                }
+                        }
+
+                },
+                "name" : "31",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "3"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "2"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "1"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0004"
+                                },
+                            "port": {
+                                 "value": "771"
+                                }
+                        }
+
+                },
+                "name" : "32",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "3"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "3"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "1"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0004"
+                                },
+                            "port": {
+                                 "value": "771"
+                                }
+                        }
+
+                },
+                "name" : "33",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "3"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "4"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "1"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0004"
+                                },
+                            "port": {
+                                 "value": "771"
+                                }
+                        }
+
+                },
+                "name" : "34",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "3"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "5"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "1"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0004"
+                                },
+                            "port": {
+                                 "value": "771"
+                                }
+                        }
+
+                },
+                "name" : "36",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "3"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "1"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "2"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0004"
+                                },
+                            "port": {
+                                 "value": "771"
+                                }
+                        }
+
+                },
+                "name" : "37",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "3"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "2"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "2"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0004"
+                                },
+                            "port": {
+                                 "value": "771"
+                                }
+                        }
+
+                },
+                "name" : "38",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "3"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "3"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "2"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0004"
+                                },
+                            "port": {
+                                 "value": "771"
+                                }
+                        }
+
+                },
+                "name" : "39",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "3"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "4"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "2"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0004"
+                                },
+                            "port": {
+                                 "value": "771"
+                                }
+                        }
+
+                },
+                "name" : "40",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "3"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "5"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "2"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0004"
+                                },
+                            "port": {
+                                 "value": "771"
+                                }
+                        }
+
+                },
+                "name" : "41",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "3"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "1"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "3"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0004"
+                                },
+                            "port": {
+                                 "value": "771"
+                                }
+                        }
+
+                },
+                "name" : "42",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "3"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "2"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "3"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0004"
+                                },
+                            "port": {
+                                 "value": "771"
+                                }
+                        }
+
+                },
+                "name" : "43",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "3"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "3"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "3"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0004"
+                                },
+                            "port": {
+                                 "value": "771"
+                                }
+                        }
+
+                },
+                "name" : "44",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "3"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "4"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "3"
+                    }
+
+                }
+                
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::ipv4_forward",
+                    "data" : {
+                            "dstAddr": {
+                                  "value": "0004"
+                                },
+                            "port": {
+                                 "value": "771"
+                                }
+                        }
+
+                },
+                "name" : "45",
+                "match": {
+                    "ingress::scalars.metadata@action_select1": {
+                        "value": "3"
+                    },
+                     "ingress::scalars.metadata@action_select2": {
+                        "value": "5"
+                    },
+                     "ingress::scalars.metadata@action_select3": {
+                        "value": "3"
+                    }
+
+                }
+                
+            }
+            
+            ]
+        },
+        "ingress::feature1_exact": {
+            "rules": [
+            {
+                "action":
+                {
+                    "type" : "ingress::set_actionselect1",
+                    "data" : {
+                    "featurevalue1" : {
+                            "value" : "1"
+                        }
+                     }
+                },                
+                "name" : "46",
+                "match": {
+                    "ipv4.protocol": {
+                        "value": "0->4"
+                    }
+                }
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::set_actionselect1",
+                    "data" : {
+                    "featurevalue1" : {
+                            "value" : "2"
+                        }
+                     }
+                },                
+                "name" : "47",
+                "match": {
+                    "ipv4.protocol": {
+                        "value": "5->11"
+                    }
+                }
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::set_actionselect1",
+                    "data" : {
+                    "featurevalue1" : {
+                            "value" : "3"
+                        }
+                     }
+                },                
+                "name" : "48",
+                "match": {
+                    "ipv4.protocol": {
+                        "value": "12->32"
+                    }
+                }
+            }
+
+            ]
+          },
+          "ingress::feature2_exact": {
+            "rules": [
+            {
+                "action":
+                {
+                    "type" : "ingress::set_actionselect2",
+                    "data" : {
+                    "featurevalue2" : {
+                            "value" : "1"
+                        }
+                     }
+                },                
+                "name" : "49",
+                "match": {
+                    "tcp.srcPort": {
+                        "value": "0->23356"
+                    }
+                }
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::set_actionselect2",
+                    "data" : {
+                    "featurevalue2" : {
+                            "value" : "2"
+                        }
+                     }
+                },                
+                "name" : "50",
+                "match": {
+                    "tcp.srcPort": {
+                        "value": "23357->28915"
+                    }
+                }
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::set_actionselect2",
+                    "data" : {
+                    "featurevalue2" : {
+                            "value" : "3"
+                        }
+                     }
+                },                
+                "name" : "51",
+                "match": {
+                    "tcp.srcPort": {
+                        "value": "28916->42966"
+                    }
+                }
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::set_actionselect2",
+                    "data" : {
+                    "featurevalue2" : {
+                            "value" : "4"
+                        }
+                     }
+                },                
+                "name" : "52",
+                "match": {
+                    "tcp.srcPort": {
+                        "value": "42967->49929"
+                    }
+                }
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::set_actionselect2",
+                    "data" : {
+                    "featurevalue2" : {
+                            "value" : "5"
+                        }
+                     }
+                },                
+                "name" : "53",
+                "match": {
+                    "tcp.srcPort": {
+                        "value": "49930->65535"
+                    }
+                }
+            }
+
+
+            ]
+          },
+          "ingress::feature3_exact": {
+            "rules": [
+            {
+                "action":
+                {
+                    "type" : "ingress::set_actionselect3",
+                    "data" : {
+                    "featurevalue3" : {
+                            "value" : "1"
+                        }
+                     }
+                },                
+                "name" : "54",
+                "match": {
+                    "tcp.dstPort": {
+                        "value": "0->5289"
+                    }
+                }
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::set_actionselect3",
+                    "data" : {
+                    "featurevalue3" : {
+                            "value" : "2"
+                        }
+                     }
+                },                
+                "name" : "55",
+                "match": {
+                    "tcp.dstPort": {
+                        "value": "5290->28915"
+                    }
+                }
+            },
+            {
+                "action":
+                {
+                    "type" : "ingress::set_actionselect3",
+                    "data" : {
+                    "featurevalue3" : {
+                            "value" : "3"
+                        }
+                     }
+                },                
+                "name" : "56",
+                "match": {
+                    "tcp.dstPort": {
+                        "value": "28916->65535"
+                    }
+                }
+            }
+
+
+            ]
+          }
+
+        }
+
+
+}

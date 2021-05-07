@@ -1,0 +1,192 @@
+{
+ "tables": [
+  {
+   "preamble": {
+    "id": 33559104,
+    "name": "feature1_exact",
+    "alias": "feature1_exact"
+   },
+   "matchFields": [
+    {
+     "id": 1,
+     "name": "hdr.ipv4.protocol",
+     "bitwidth": 8,
+     "matchType": "RANGE"
+    }
+   ],
+   "actionRefs": [
+    {
+     "id": 16800567
+    },
+    {
+     "id": 16795228
+    }
+   ],
+   "size": "1024"
+  },
+  {
+   "preamble": {
+    "id": 33581024,
+    "name": "feature2_exact",
+    "alias": "feature2_exact"
+   },
+   "matchFields": [
+    {
+     "id": 1,
+     "name": "hdr.tcp.srcPort",
+     "bitwidth": 16,
+     "matchType": "RANGE"
+    }
+   ],
+   "actionRefs": [
+    {
+     "id": 16800567
+    },
+    {
+     "id": 16834871
+    }
+   ],
+   "size": "1024"
+  },
+  {
+   "preamble": {
+    "id": 33558721,
+    "name": "feature3_exact",
+    "alias": "feature3_exact"
+   },
+   "matchFields": [
+    {
+     "id": 1,
+     "name": "hdr.tcp.dstPort",
+     "bitwidth": 16,
+     "matchType": "RANGE"
+    }
+   ],
+   "actionRefs": [
+    {
+     "id": 16800567
+    },
+    {
+     "id": 16780723
+    }
+   ],
+   "size": "1024"
+  },
+  {
+   "preamble": {
+    "id": 33600005,
+    "name": "ipv4_exact",
+    "alias": "ipv4_exact"
+   },
+   "matchFields": [
+    {
+     "id": 1,
+     "name": "meta.action_select1",
+     "bitwidth": 14,
+     "matchType": "RANGE"
+    },
+    {
+     "id": 2,
+     "name": "meta.action_select2",
+     "bitwidth": 14,
+     "matchType": "RANGE"
+    },
+    {
+     "id": 3,
+     "name": "meta.action_select3",
+     "bitwidth": 14,
+     "matchType": "RANGE"
+    }
+   ],
+   "actionRefs": [
+    {
+     "id": 16786453
+    },
+    {
+     "id": 16793508
+    },
+    {
+     "id": 16800567
+    }
+   ],
+   "size": "1024"
+  }
+ ],
+ "actions": [
+  {
+   "preamble": {
+    "id": 16800567,
+    "name": "NoAction",
+    "alias": "NoAction"
+   }
+  },
+  {
+   "preamble": {
+    "id": 16793508,
+    "name": "drop",
+    "alias": "drop"
+   }
+  },
+  {
+   "preamble": {
+    "id": 16786453,
+    "name": "ipv4_forward",
+    "alias": "ipv4_forward"
+   },
+   "params": [
+    {
+     "id": 1,
+     "name": "dstAddr",
+     "bitwidth": 48
+    },
+    {
+     "id": 2,
+     "name": "port",
+     "bitwidth": 16
+    }
+   ]
+  },
+  {
+   "preamble": {
+    "id": 16795228,
+    "name": "set_actionselect1",
+    "alias": "set_actionselect1"
+   },
+   "params": [
+    {
+     "id": 1,
+     "name": "featurevalue1",
+     "bitwidth": 14
+    }
+   ]
+  },
+  {
+   "preamble": {
+    "id": 16834871,
+    "name": "set_actionselect2",
+    "alias": "set_actionselect2"
+   },
+   "params": [
+    {
+     "id": 1,
+     "name": "featurevalue2",
+     "bitwidth": 14
+    }
+   ]
+  },
+  {
+   "preamble": {
+    "id": 16780723,
+    "name": "set_actionselect3",
+    "alias": "set_actionselect3"
+   },
+   "params": [
+    {
+     "id": 1,
+     "name": "featurevalue3",
+     "bitwidth": 14
+    }
+   ]
+  }
+ ]
+}

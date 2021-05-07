@@ -1,0 +1,868 @@
+{
+    "generic": {
+        "tables_info": {
+            "ingress::ipv4_exact": {
+                "max_entries": 1025, 
+                "allowed_actions": [
+                    "ingress::ipv4_forward", 
+                    "ingress::drop"
+                ], 
+                "name": "ingress::ipv4_exact"
+            }, 
+            "ingress::feature1_exact": {
+                "max_entries": 1025, 
+                "allowed_actions": [
+                    "ingress::set_actionselect1"
+                ], 
+                "name": "ingress::feature1_exact"
+            }, 
+            "ingress::feature2_exact": {
+                "max_entries": 1025, 
+                "allowed_actions": [
+                    "ingress::set_actionselect2"
+                ], 
+                "name": "ingress::feature2_exact"
+            }, 
+            "ingress::feature3_exact": {
+                "max_entries": 1025, 
+                "allowed_actions": [
+                    "ingress::set_actionselect3"
+                ], 
+                "name": "ingress::feature3_exact"
+            }
+        }, 
+        "action_info": {
+            "ingress::act": {
+                "name": "ingress::act", 
+                "action_data": {
+                    "__pif_rule_no": {
+                        "size": 32
+                    }, 
+                    "__pif_table_no": {
+                        "size": 32
+                    }
+                }
+            }, 
+            "ingress::set_actionselect2": {
+                "name": "ingress::set_actionselect2", 
+                "action_data": {
+                    "featurevalue2": {
+                        "size": 14
+                    }, 
+                    "__pif_rule_no": {
+                        "size": 32
+                    }, 
+                    "__pif_table_no": {
+                        "size": 32
+                    }
+                }
+            }, 
+            "ingress::set_actionselect3": {
+                "name": "ingress::set_actionselect3", 
+                "action_data": {
+                    "featurevalue3": {
+                        "size": 14
+                    }, 
+                    "__pif_rule_no": {
+                        "size": 32
+                    }, 
+                    "__pif_table_no": {
+                        "size": 32
+                    }
+                }
+            }, 
+            "ingress::set_actionselect1": {
+                "name": "ingress::set_actionselect1", 
+                "action_data": {
+                    "featurevalue1": {
+                        "size": 14
+                    }, 
+                    "__pif_rule_no": {
+                        "size": 32
+                    }, 
+                    "__pif_table_no": {
+                        "size": 32
+                    }
+                }
+            }, 
+            "ingress::ipv4_forward": {
+                "name": "ingress::ipv4_forward", 
+                "action_data": {
+                    "dstAddr": {
+                        "size": 48
+                    }, 
+                    "port": {
+                        "size": 16
+                    }, 
+                    "__pif_rule_no": {
+                        "size": 32
+                    }, 
+                    "__pif_table_no": {
+                        "size": 32
+                    }
+                }
+            }, 
+            "ingress::drop": {
+                "name": "ingress::drop", 
+                "action_data": {
+                    "__pif_rule_no": {
+                        "size": 32
+                    }, 
+                    "__pif_table_no": {
+                        "size": 32
+                    }
+                }
+            }
+        }
+    }, 
+    "vendor": {
+        "register_info": {}, 
+        "backend_source_info": {
+            "date": "2021/05/07 11:42:01", 
+            "source_files": "p4src/decision_tree_BMV2.yml"
+        }, 
+        "counters_info": {}, 
+        "meter_info": {}, 
+        "frontend_source_info": {
+            "date": "2021/05/07 11:42:00", 
+            "source_files": [
+                "", 
+                "/opt/netronome/p4/include/16/p4include/core.p4", 
+                "p4src/decision_tree_BMV2.p4"
+            ]
+        }, 
+        "tables_info": {
+            "ingress::ipv4_exact": {
+                "name": "ingress::ipv4_exact", 
+                "constant_default": false, 
+                "matches": [
+                    {
+                        "field": "ingress::scalars.metadata@action_select1", 
+                        "type": "range", 
+                        "class": "field", 
+                        "lm_layout": [
+                            {
+                                "width": 14, 
+                                "fldbitoff": 0, 
+                                "name": "metadata__action_select1", 
+                                "lmbitoff": 658
+                            }
+                        ]
+                    }, 
+                    {
+                        "field": "ingress::scalars.metadata@action_select2", 
+                        "type": "range", 
+                        "class": "field", 
+                        "lm_layout": [
+                            {
+                                "width": 14, 
+                                "fldbitoff": 0, 
+                                "name": "metadata__action_select2", 
+                                "lmbitoff": 626
+                            }
+                        ]
+                    }, 
+                    {
+                        "field": "ingress::scalars.metadata@action_select3", 
+                        "type": "range", 
+                        "class": "field", 
+                        "lm_layout": [
+                            {
+                                "width": 14, 
+                                "fldbitoff": 0, 
+                                "name": "metadata__action_select3", 
+                                "lmbitoff": 612
+                            }
+                        ]
+                    }
+                ], 
+                "allowed_actions": [
+                    "ingress::ipv4_forward", 
+                    "ingress::drop"
+                ], 
+                "id": 2, 
+                "max_entries": 1025, 
+                "data_shift": 5, 
+                "rtsym": "_pif_actiondata_table_2_ingress__ipv4_exact", 
+                "default_entry": {
+                    "action": {
+                        "data": {}, 
+                        "type": "ingress::drop"
+                    }, 
+                    "name": "application_default"
+                }, 
+                "data_size": 32
+            }, 
+            "ingress::feature1_exact": {
+                "name": "ingress::feature1_exact", 
+                "constant_default": false, 
+                "matches": [
+                    {
+                        "field": "ipv4.protocol", 
+                        "type": "range", 
+                        "class": "field", 
+                        "header_valid": {
+                            "header": "ipv4", 
+                            "type": "header_valid", 
+                            "class": "header_valid", 
+                            "lm_layout": [
+                                {
+                                    "width": 1, 
+                                    "name": "ipv4_valid", 
+                                    "value": 1, 
+                                    "lmbitoff": 27
+                                }
+                            ]
+                        }, 
+                        "lm_layout": [
+                            {
+                                "width": 8, 
+                                "fldbitoff": 0, 
+                                "name": "protocol", 
+                                "lmbitoff": 240
+                            }
+                        ]
+                    }
+                ], 
+                "allowed_actions": [
+                    "ingress::set_actionselect1"
+                ], 
+                "id": 0, 
+                "max_entries": 1025, 
+                "data_shift": 4, 
+                "rtsym": "_pif_actiondata_table_0_ingress__feature1_exact", 
+                "data_size": 16
+            }, 
+            "ingress::feature2_exact": {
+                "name": "ingress::feature2_exact", 
+                "constant_default": false, 
+                "matches": [
+                    {
+                        "field": "tcp.srcPort", 
+                        "type": "range", 
+                        "class": "field", 
+                        "header_valid": {
+                            "header": "tcp", 
+                            "type": "header_valid", 
+                            "class": "header_valid", 
+                            "lm_layout": [
+                                {
+                                    "width": 1, 
+                                    "name": "tcp_valid", 
+                                    "value": 1, 
+                                    "lmbitoff": 24
+                                }
+                            ]
+                        }, 
+                        "lm_layout": [
+                            {
+                                "width": 16, 
+                                "fldbitoff": 0, 
+                                "name": "srcPort", 
+                                "lmbitoff": 336
+                            }
+                        ]
+                    }
+                ], 
+                "allowed_actions": [
+                    "ingress::set_actionselect2"
+                ], 
+                "id": 3, 
+                "max_entries": 1025, 
+                "data_shift": 4, 
+                "rtsym": "_pif_actiondata_table_3_ingress__feature2_exact", 
+                "data_size": 16
+            }, 
+            "ingress::feature3_exact": {
+                "name": "ingress::feature3_exact", 
+                "constant_default": false, 
+                "matches": [
+                    {
+                        "field": "tcp.dstPort", 
+                        "type": "range", 
+                        "class": "field", 
+                        "header_valid": {
+                            "header": "tcp", 
+                            "type": "header_valid", 
+                            "class": "header_valid", 
+                            "lm_layout": [
+                                {
+                                    "width": 1, 
+                                    "name": "tcp_valid", 
+                                    "value": 1, 
+                                    "lmbitoff": 24
+                                }
+                            ]
+                        }, 
+                        "lm_layout": [
+                            {
+                                "width": 16, 
+                                "fldbitoff": 0, 
+                                "name": "dstPort", 
+                                "lmbitoff": 320
+                            }
+                        ]
+                    }
+                ], 
+                "allowed_actions": [
+                    "ingress::set_actionselect3"
+                ], 
+                "id": 1, 
+                "max_entries": 1025, 
+                "data_shift": 4, 
+                "rtsym": "_pif_actiondata_table_1_ingress__feature3_exact", 
+                "data_size": 16
+            }
+        }, 
+        "action_info": {
+            "ingress::act": {
+                "timeoutno_field": "", 
+                "name": "ingress::act", 
+                "action_data": {
+                    "__pif_rule_no": {
+                        "size": 32
+                    }, 
+                    "__pif_table_no": {
+                        "size": 32
+                    }
+                }, 
+                "ruleno_field": "__pif_rule_no", 
+                "action_data_packed": [
+                    {
+                        "actiondata": "__pif_rule_no", 
+                        "name": "__pif_rule_no", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 4, 
+                        "pad_type": "uint32_t", 
+                        "split": false, 
+                        "size": 32
+                    }, 
+                    {
+                        "actiondata": "__pif_table_no", 
+                        "name": "__pif_table_no", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 4, 
+                        "pad_type": "uint32_t", 
+                        "split": false, 
+                        "size": 32
+                    }
+                ], 
+                "noeffect": false, 
+                "id": 0, 
+                "tableno_field": "__pif_table_no"
+            }, 
+            "ingress::set_actionselect2": {
+                "timeoutno_field": "", 
+                "name": "ingress::set_actionselect2", 
+                "action_data": {
+                    "featurevalue2": {
+                        "size": 14
+                    }, 
+                    "__pif_rule_no": {
+                        "size": 32
+                    }, 
+                    "__pif_table_no": {
+                        "size": 32
+                    }
+                }, 
+                "ruleno_field": "__pif_rule_no", 
+                "action_data_packed": [
+                    {
+                        "actiondata": "__pif_rule_no", 
+                        "name": "__pif_rule_no", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 4, 
+                        "pad_type": "uint32_t", 
+                        "split": false, 
+                        "size": 32
+                    }, 
+                    {
+                        "actiondata": "__pif_table_no", 
+                        "name": "__pif_table_no", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 4, 
+                        "pad_type": "uint32_t", 
+                        "split": false, 
+                        "size": 32
+                    }, 
+                    {
+                        "actiondata": "featurevalue2", 
+                        "name": "featurevalue2", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 2, 
+                        "pad_type": "uint16_t", 
+                        "split": false, 
+                        "size": 14
+                    }, 
+                    {
+                        "pad_cnt": 2, 
+                        "pad_type": "uint8_t", 
+                        "actiondata": null, 
+                        "name": "__pif_padding", 
+                        "split": false, 
+                        "doc": "padding", 
+                        "pad_szbytes": 1, 
+                        "size": 8
+                    }
+                ], 
+                "noeffect": false, 
+                "id": 1, 
+                "tableno_field": "__pif_table_no"
+            }, 
+            "ingress::set_actionselect3": {
+                "timeoutno_field": "", 
+                "name": "ingress::set_actionselect3", 
+                "action_data": {
+                    "featurevalue3": {
+                        "size": 14
+                    }, 
+                    "__pif_rule_no": {
+                        "size": 32
+                    }, 
+                    "__pif_table_no": {
+                        "size": 32
+                    }
+                }, 
+                "ruleno_field": "__pif_rule_no", 
+                "action_data_packed": [
+                    {
+                        "actiondata": "__pif_rule_no", 
+                        "name": "__pif_rule_no", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 4, 
+                        "pad_type": "uint32_t", 
+                        "split": false, 
+                        "size": 32
+                    }, 
+                    {
+                        "actiondata": "__pif_table_no", 
+                        "name": "__pif_table_no", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 4, 
+                        "pad_type": "uint32_t", 
+                        "split": false, 
+                        "size": 32
+                    }, 
+                    {
+                        "actiondata": "featurevalue3", 
+                        "name": "featurevalue3", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 2, 
+                        "pad_type": "uint16_t", 
+                        "split": false, 
+                        "size": 14
+                    }, 
+                    {
+                        "pad_cnt": 2, 
+                        "pad_type": "uint8_t", 
+                        "actiondata": null, 
+                        "name": "__pif_padding", 
+                        "split": false, 
+                        "doc": "padding", 
+                        "pad_szbytes": 1, 
+                        "size": 8
+                    }
+                ], 
+                "noeffect": false, 
+                "id": 2, 
+                "tableno_field": "__pif_table_no"
+            }, 
+            "ingress::set_actionselect1": {
+                "timeoutno_field": "", 
+                "name": "ingress::set_actionselect1", 
+                "action_data": {
+                    "featurevalue1": {
+                        "size": 14
+                    }, 
+                    "__pif_rule_no": {
+                        "size": 32
+                    }, 
+                    "__pif_table_no": {
+                        "size": 32
+                    }
+                }, 
+                "ruleno_field": "__pif_rule_no", 
+                "action_data_packed": [
+                    {
+                        "actiondata": "__pif_rule_no", 
+                        "name": "__pif_rule_no", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 4, 
+                        "pad_type": "uint32_t", 
+                        "split": false, 
+                        "size": 32
+                    }, 
+                    {
+                        "actiondata": "__pif_table_no", 
+                        "name": "__pif_table_no", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 4, 
+                        "pad_type": "uint32_t", 
+                        "split": false, 
+                        "size": 32
+                    }, 
+                    {
+                        "actiondata": "featurevalue1", 
+                        "name": "featurevalue1", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 2, 
+                        "pad_type": "uint16_t", 
+                        "split": false, 
+                        "size": 14
+                    }, 
+                    {
+                        "pad_cnt": 2, 
+                        "pad_type": "uint8_t", 
+                        "actiondata": null, 
+                        "name": "__pif_padding", 
+                        "split": false, 
+                        "doc": "padding", 
+                        "pad_szbytes": 1, 
+                        "size": 8
+                    }
+                ], 
+                "noeffect": false, 
+                "id": 3, 
+                "tableno_field": "__pif_table_no"
+            }, 
+            "ingress::ipv4_forward": {
+                "timeoutno_field": "", 
+                "name": "ingress::ipv4_forward", 
+                "action_data": {
+                    "dstAddr": {
+                        "size": 48
+                    }, 
+                    "port": {
+                        "size": 16
+                    }, 
+                    "__pif_rule_no": {
+                        "size": 32
+                    }, 
+                    "__pif_table_no": {
+                        "size": 32
+                    }
+                }, 
+                "ruleno_field": "__pif_rule_no", 
+                "action_data_packed": [
+                    {
+                        "actiondata": "dstAddr", 
+                        "name": "dstAddr_1", 
+                        "pad_cnt": 1, 
+                        "doc": "dstAddr[48:16]", 
+                        "pad_szbytes": 4, 
+                        "pad_type": "uint32_t", 
+                        "split": true, 
+                        "size": 32, 
+                        "splitoff": 16
+                    }, 
+                    {
+                        "actiondata": "__pif_rule_no", 
+                        "name": "__pif_rule_no", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 4, 
+                        "pad_type": "uint32_t", 
+                        "split": false, 
+                        "size": 32
+                    }, 
+                    {
+                        "actiondata": "__pif_table_no", 
+                        "name": "__pif_table_no", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 4, 
+                        "pad_type": "uint32_t", 
+                        "split": false, 
+                        "size": 32
+                    }, 
+                    {
+                        "actiondata": "dstAddr", 
+                        "name": "dstAddr_0", 
+                        "pad_cnt": 1, 
+                        "doc": "dstAddr[16:0]", 
+                        "pad_szbytes": 2, 
+                        "pad_type": "uint16_t", 
+                        "split": true, 
+                        "size": 16, 
+                        "splitoff": 0
+                    }, 
+                    {
+                        "actiondata": "port", 
+                        "name": "port", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 2, 
+                        "pad_type": "uint16_t", 
+                        "split": false, 
+                        "size": 16
+                    }
+                ], 
+                "noeffect": false, 
+                "id": 4, 
+                "tableno_field": "__pif_table_no"
+            }, 
+            "ingress::drop": {
+                "timeoutno_field": "", 
+                "name": "ingress::drop", 
+                "action_data": {
+                    "__pif_rule_no": {
+                        "size": 32
+                    }, 
+                    "__pif_table_no": {
+                        "size": 32
+                    }
+                }, 
+                "ruleno_field": "__pif_rule_no", 
+                "action_data_packed": [
+                    {
+                        "actiondata": "__pif_rule_no", 
+                        "name": "__pif_rule_no", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 4, 
+                        "pad_type": "uint32_t", 
+                        "split": false, 
+                        "size": 32
+                    }, 
+                    {
+                        "actiondata": "__pif_table_no", 
+                        "name": "__pif_table_no", 
+                        "pad_cnt": 1, 
+                        "doc": null, 
+                        "pad_szbytes": 4, 
+                        "pad_type": "uint32_t", 
+                        "split": false, 
+                        "size": 32
+                    }
+                ], 
+                "noeffect": false, 
+                "id": 5, 
+                "tableno_field": "__pif_table_no"
+            }
+        }, 
+        "multicast": {
+            "table_rtsym": "_pif_mcast_table", 
+            "group_count": 16, 
+            "group_size": 16
+        }, 
+        "custom_errors": {
+            "NoError": 1, 
+            "PacketTooShort": 2, 
+            "NoMatch": 3, 
+            "StackOutOfBounds": 4, 
+            "HeaderTooShort": 5, 
+            "ParserTimeout": 6
+        }, 
+        "build_uuid": [
+            2688932918, 
+            3025732162, 
+            2938704363, 
+            1018151078
+        ], 
+        "digests_info": {}, 
+        "parser_value_set_info": {}
+    }, 
+    "p4info": {
+        "tables": [
+            {
+                "actionRefs": [
+                    {
+                        "id": 16800567
+                    }, 
+                    {
+                        "id": 16795228
+                    }
+                ], 
+                "matchFields": [
+                    {
+                        "matchType": "RANGE", 
+                        "bitwidth": 8, 
+                        "id": 1, 
+                        "name": "hdr.ipv4.protocol"
+                    }
+                ], 
+                "preamble": {
+                    "alias": "feature1_exact", 
+                    "id": 33559104, 
+                    "name": "feature1_exact"
+                }, 
+                "size": "1024"
+            }, 
+            {
+                "actionRefs": [
+                    {
+                        "id": 16800567
+                    }, 
+                    {
+                        "id": 16834871
+                    }
+                ], 
+                "matchFields": [
+                    {
+                        "matchType": "RANGE", 
+                        "bitwidth": 16, 
+                        "id": 1, 
+                        "name": "hdr.tcp.srcPort"
+                    }
+                ], 
+                "preamble": {
+                    "alias": "feature2_exact", 
+                    "id": 33581024, 
+                    "name": "feature2_exact"
+                }, 
+                "size": "1024"
+            }, 
+            {
+                "actionRefs": [
+                    {
+                        "id": 16800567
+                    }, 
+                    {
+                        "id": 16780723
+                    }
+                ], 
+                "matchFields": [
+                    {
+                        "matchType": "RANGE", 
+                        "bitwidth": 16, 
+                        "id": 1, 
+                        "name": "hdr.tcp.dstPort"
+                    }
+                ], 
+                "preamble": {
+                    "alias": "feature3_exact", 
+                    "id": 33558721, 
+                    "name": "feature3_exact"
+                }, 
+                "size": "1024"
+            }, 
+            {
+                "actionRefs": [
+                    {
+                        "id": 16786453
+                    }, 
+                    {
+                        "id": 16793508
+                    }, 
+                    {
+                        "id": 16800567
+                    }
+                ], 
+                "matchFields": [
+                    {
+                        "matchType": "RANGE", 
+                        "bitwidth": 14, 
+                        "id": 1, 
+                        "name": "meta.action_select1"
+                    }, 
+                    {
+                        "matchType": "RANGE", 
+                        "bitwidth": 14, 
+                        "id": 2, 
+                        "name": "meta.action_select2"
+                    }, 
+                    {
+                        "matchType": "RANGE", 
+                        "bitwidth": 14, 
+                        "id": 3, 
+                        "name": "meta.action_select3"
+                    }
+                ], 
+                "preamble": {
+                    "alias": "ipv4_exact", 
+                    "id": 33600005, 
+                    "name": "ipv4_exact"
+                }, 
+                "size": "1024"
+            }
+        ], 
+        "actions": [
+            {
+                "preamble": {
+                    "alias": "NoAction", 
+                    "id": 16800567, 
+                    "name": "NoAction"
+                }
+            }, 
+            {
+                "preamble": {
+                    "alias": "drop", 
+                    "id": 16793508, 
+                    "name": "drop"
+                }
+            }, 
+            {
+                "params": [
+                    {
+                        "bitwidth": 48, 
+                        "id": 1, 
+                        "name": "dstAddr"
+                    }, 
+                    {
+                        "bitwidth": 16, 
+                        "id": 2, 
+                        "name": "port"
+                    }
+                ], 
+                "preamble": {
+                    "alias": "ipv4_forward", 
+                    "id": 16786453, 
+                    "name": "ipv4_forward"
+                }
+            }, 
+            {
+                "params": [
+                    {
+                        "bitwidth": 14, 
+                        "id": 1, 
+                        "name": "featurevalue1"
+                    }
+                ], 
+                "preamble": {
+                    "alias": "set_actionselect1", 
+                    "id": 16795228, 
+                    "name": "set_actionselect1"
+                }
+            }, 
+            {
+                "params": [
+                    {
+                        "bitwidth": 14, 
+                        "id": 1, 
+                        "name": "featurevalue2"
+                    }
+                ], 
+                "preamble": {
+                    "alias": "set_actionselect2", 
+                    "id": 16834871, 
+                    "name": "set_actionselect2"
+                }
+            }, 
+            {
+                "params": [
+                    {
+                        "bitwidth": 14, 
+                        "id": 1, 
+                        "name": "featurevalue3"
+                    }
+                ], 
+                "preamble": {
+                    "alias": "set_actionselect3", 
+                    "id": 16780723, 
+                    "name": "set_actionselect3"
+                }
+            }
+        ]
+    }
+}
